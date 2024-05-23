@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+
+#MainBody {
+    /* background-color: rgb(27, 2, 61); */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainCard {
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+
+
+}
+
+#heading {
+    /* background-color: white; */
+    /* height: 50vh;
+    width: 50vw; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#heading h2 {
+    color: rgb(27, 2, 61);
+}
+
+#heading div {
+    /* border: 3px solid rgb(27, 2, 61); */
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    animation: turn 1s ease forwards infinite;
+}
+
+
+@keyframes turn {
+    0% {
+        transform: rotateX(360deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+#bl {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(27, 2, 61);
+    margin: 10px 0px;
+    border-radius: 50%;
+
+
+}
+
+.options {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.choices {
+    /* background-color: black; */
+
+}
