@@ -47,6 +47,40 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'F12' ||
+                (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+                (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+                (event.ctrlKey && event.key === 'U') ||
+                (event.ctrlKey && event.shiftKey && event.key === 'C')) {
+                event.preventDefault();
+            }
+        });
+
+        function detectDevTools(opened) {
+            if (opened) {
+                // Redirect or log event
+                window.location.href = 'about:blank'; // Example: Redirect to a blank page
+            }
+        }
+
+        let devtools = new Image();
+        Object.defineProperty(devtools, 'id', {
+            get: function () {
+                detectDevTools(true);
+            }
+        });
+
+        setInterval(function () {
+            console.log(devtools);
+            detectDevTools(false);
+        }, 1000);
+    </script>
 </body>
 
 </html>
