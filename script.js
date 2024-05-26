@@ -90,7 +90,7 @@ let currentdata = {
     id: 1,
     ques: "What is javascript?",
     opt: ["A markup Language", "A scripting language", "A programming language", "None of the above"],
-    corr: "A markup Language",
+    corr: "A scripting language",
     time: 30,
 }
 function timerfunction(num) {
