@@ -17,19 +17,19 @@ const data = [
         ques: "Which one of the following also known as Conditional Expression:",
         opt: ["Alternative to if-else", "Switch statement", "If-then-else statement", "immediate if"],
         corr: "immediate if",
-        time: 40,
+        time: 30,
     }, {
         id: 3,
         ques: "In JavaScript, what is a block of statement?",
         opt: ["Conditional block", "block that combines a number of statements into a single compound statement", "both conditional block and a single statement", "block that contains a single statement"],
         corr: "block that combines a number of statements into a single compound statement",
-        time: 50,
+        time: 40,
     }, {
         id: 4,
         ques: "When interpreter encounters an empty statements, what it will do:",
         opt: ["Shows a warning", "Prompts to complete the statement", "Throws an error", "Ignores the statements"],
         corr: "Ignores the statements",
-        time: 60,
+        time: 40,
     }, {
         id: 5,
         ques: 'The "function" and " var" are known as:',
@@ -98,7 +98,6 @@ function timerfunction(num) {
     let tm = num;
     showtimer.innerText = `${tm}`;
     questionTimer = setInterval(() => {
-
         tm--;
         showtimer.innerText = `${tm}`;
         if (tm <= num / 2) {
@@ -177,6 +176,7 @@ function disablingbtn() {
 function stoptimer() {
     clearInterval(questionTimer);
     showtimer.style.animation = "none";
+    showtimer.style.backgroundColor = "green";
 }
 const scorebored = document.getElementById("scorebored");
 function nextbtn() {
